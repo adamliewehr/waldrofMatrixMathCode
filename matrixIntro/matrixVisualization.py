@@ -13,7 +13,7 @@ list1 = [1, 2, 3]
 # We can print this out using print()
 
 print("This is a list:")
-print(list1)
+print(list1) # output: "[1, 2, 3]"
 print("")
 # try changing list1 and see what happens!
 

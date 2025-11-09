@@ -1,5 +1,16 @@
 # Finding the order of a matrix
 
+# for all of the following matricies, we will assume that they are valid
+# they cannot be something like this:
+
+invalidMatrix = [[1, 2, 3],
+                 [4, 5],
+                 [7, 8, 9]]
+
+# this is not a valid matrix, because the rows do not have the same number of elements
+# in a valid matrix, all rows must have the same number of elements
+# so, we will only be working with valid matricies from now on
+
 # To find the order of a matrix, we need to know the number of rows, and the number of columns
 
 matrix1 = [[1, 2,  3,  4], 
@@ -64,3 +75,19 @@ matrix2 = [[1, 2],
            [3, 4]]
 
 squareMatrixCheck(matrix2) # output: "This is a square matrix!"
+
+# lets create a function to return the order of a matrix as a tuple
+# what is a tuple?
+# a tuple is similar to a list, but it is immutable (cannot be changed)
+# tuples are created using parentheses instead of square brackets
+
+def getMatrixOrder(matrix):
+    return (len(matrix), len(matrix[0]))
+
+# remember, the order is (number of rows, number of columns)
+
+print(getMatrixOrder(matrix1)) # output: (3, 4)
+print(getMatrixOrder(matrix2)) # output: (2, 2)
+
+# now you know how to find the order of a matrix, and how to access specific elements in a matrix!
+# these are basic concepts that will help you understand more complex matrix operations in the future

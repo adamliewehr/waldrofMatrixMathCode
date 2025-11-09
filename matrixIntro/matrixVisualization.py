@@ -14,7 +14,6 @@ list1 = [1, 2, 3]
 
 print("This is a list:")
 print(list1) # output: "[1, 2, 3]"
-print("")
 # try changing list1 and see what happens!
 
 # since we can put prety much anything in a list, we can also put another list, inside a list
@@ -25,12 +24,12 @@ matrix1 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 
 print("This is a matrix:")
 print(matrix1)
-print("")
 # try changing matrix1 to see what happens!
 
 
 # both the matrix in our code, and the output doesn't really look like a matrix though
 # we can format out code easily using the enter key
+# this creates a new line in our code, which makes it easier to read
 
 matrix1 = [[1, 2, 3], 
            [4, 5, 6], 
@@ -39,7 +38,6 @@ matrix1 = [[1, 2, 3],
 # But our output will still be the same
 
 print(matrix1)
-print()
 
 # How can we output a matrix so it actually looks like a matrix?
 # Well, there are several ways to do this (good and bad)
@@ -61,18 +59,18 @@ matrix1 = [[1, 2,  3,  4],
            [9, 10, 11, 12], 
            [13, 14, 15, 16]]
 
+# now if we try to print it using the same exact code:
 
 print(matrix1[0])
 print(matrix1[1])
 print(matrix1[2])
-
 
 # our output is not printing out our complete matrix!
 # becuase we hard coded our first matrix which was a 3x3 matrix, our output code doesn't work for a 4x4 matrix
 # for matrices of variable sizes, we need to write a program that can print out the matrix, no matter what the order is
 # for this, we use something called a for loop!
 
-# A for loop is a loop (who could have guessed) that is used for iterating over a sequence (such as a list)
+# A for loop is a loop (who could have guessed!) that is used for iterating over a sequence (such as a list)
 #  It allows you to execute a block of code repeatedly, once for each item in the sequence. 
 
 # So, to print out a matrix, no matter the size, we can write this program:
@@ -85,6 +83,7 @@ def printMatrix(matrix):
 
 print("Printing the full matrix:")
 printMatrix(matrix1)
-# try changing matrix 1 on line 59 to see what happens!
-
-
+# try changing matrix 1 to see what happens!
+# as we can see, this prints out the full matrix, no matter what the order is!
+# this is because the for loop goes through each row in the matrix, and prints it out
+# this is a much better way to print out a matrix!

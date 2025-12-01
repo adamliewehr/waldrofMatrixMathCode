@@ -39,42 +39,42 @@ def multiplyMatrices(matrix1, matrix2):
     if (canMultiply(matrix1, matrix2)): # if the matrices are compatible for multiplication
         result = [] # create the matrix that will store the number we get from the multiplcation
         
-        for matrix1Row in range(len(matrix1)):
+        for matrix1Row in range(len(matrix1)): # for each row in matrix1
 
-            currentRow = matrix1[matrix1Row]
+            currentRow = matrix1[matrix1Row] # get the current row from matrix1
 
-            for i in range(len(matrix2[0])):
-                currentCol = []
-                for j in range(len(matrix2)):
-                    currentCol.append(matrix2[j][i])
+            for i in range(len(matrix2[0])): # for each column in matrix2
+                currentCol = [] # create a list to store the current column from matrix2
+                for j in range(len(matrix2)): # for each row in matrix2
+                    currentCol.append(matrix2[j][i]) # append the value to the current column list
                 
                 # print("currentRow:", currentRow)
                 # print("currentCol:", currentCol)
                 # print("")
 
-                sum = 0
-                for k in range(len(matrix1[matrix1Row])):
-                    sum+=currentRow[k]*currentCol[k]
+                sum = 0 # create a variable to store the sum of the multiplication of the current row and column
+                for k in range(len(matrix1[matrix1Row])): # for each element in the current row
+                    sum+=currentRow[k]*currentCol[k] # multiply the corresponding elements and add to the sum
 
-                result.append(sum)
+                result.append(sum) # append the sum to the result matrix
 
         # now that we have the values of the result matrix in a list
         # we can populate the finalResult matrix one by one
         # there is def a better way to do this
         # but my brain was feeling small at the moment I was programming this
 
-        for rowNum in range(getMatrixOrder(matrix1)[0]):
-            temp = []
-            for colNum in range(getMatrixOrder(matrix2)[1]):
-                temp.append(result.pop(0))
+        for rowNum in range(getMatrixOrder(matrix1)[0]): # for each row in matrix1
+            temp = [] # create a temporary list to store the current row
+            for colNum in range(getMatrixOrder(matrix2)[1]): # for each column in matrix2
+                temp.append(result.pop(0))  # pop the first element from the result list and append to the temp list
 
-            result.append(temp)
+            result.append(temp) # append the temp list to the result matrix
 
 
         return result # return the result matrix
     
-    else:
-        return False
+    else: 
+        return False # the matrices are not compatible for multiplication
     
 # if we multiple matrix A (1x3) and B (3x1), we should get a 1x1 matrix
     

@@ -1,26 +1,49 @@
 # introToPython.py - Essential Python Concepts for Matrix Math
 
+# print statements
+# In Python, we use the print() function to output text or variables to the console.
+# For example:
+print("Hello, World!") # This will print "Hello, World!" to the console
+
 # --------------------------
 # 1. Variables and Data Types
 # --------------------------
 
 # A variable is essentially a labeled container for a piece of data.
-# In other programming languages like Java and C, we have to declare the type of our variables
-# In python, we don't need to declare a type; Python figures it out.
+# You can create a variable by assigning it a value using the equals sign (=).
+# For example:
 
-# Integer (whole number)
-rows = 2
-# Floating-point number (number with a decimal)
-scalar = 3.5
-# String (text)
+rows = 2 
+scalar = 3.5 
 name = "Matrix A"
-# Boolean (True or False)
-is_square = False
+is_square = False 
 
-# we can print things to the console like this:
+# we can print our variables to the console like this:
 
 print(rows) # output: 2
 print(scalar) # output: 3.5
+
+# there are different data types in Python, including:
+# 1. Integers (int): Whole numbers, e.g., 1, -5, 100
+# 2. Floating-point numbers (float): Numbers with decimal points, e.g., 3.14, -0.001
+# 3. Strings (str): Text enclosed in quotes, e.g., "Hello, World!"
+# 4. Booleans (bool): True or False values
+
+# we can check the data type of a variable using the type() function:
+print(type(rows))    # output: <class 'int'>
+print(type(scalar))  # output: <class 'float'>
+print(type(name))    # output: <class 'str'>
+print(type(is_square)) # output: <class 'bool'>
+
+# we can also use the input() function to get user input and store it in a variable
+
+user_name = input("Enter your name: ") # This will prompt the user to enter their name
+print("Hello, " + user_name + "!") # This will greet the user by name
+
+user_age = input("Enter your age: ") # This will prompt the user to enter their age
+# Note: input() returns a string, so we need to convert it to an integer if we want to do math with it
+user_age = int(user_age) # Convert the string input to an integer
+print("In 5 years, you will be " + str(user_age + 5) + " years old.") # Convert the integer back to a string for concatenation
 
 # --------------------------
 # 2. Lists and Indexing

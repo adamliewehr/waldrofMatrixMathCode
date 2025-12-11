@@ -64,17 +64,3 @@ for i in range(5):  # this will run the code inside the loop 5 times
 for item in my_list:
     print("List item:", item)
 
-# we can also use loops to go through matrices
-
-for row in matrix:
-    print("Matrix row:", row)
-    for element in row:
-        print("Matrix element:", element)
-
-# there are also while loops, which run as long as a condition is true
-
-count = 0
-while count < 5:
-    print("Count is:", count)
-    count += 1  # this is shorthand for count = count + 1
-
